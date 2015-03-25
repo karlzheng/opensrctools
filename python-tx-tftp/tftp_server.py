@@ -13,7 +13,8 @@ def main():
     random.seed()
     log.startLogging(sys.stdout)
     #reactor.listenUDP(1069, TFTP(FilesystemSynchronousBackend('output')))
-    reactor.listenUDP(69, TFTP(FilesystemSynchronousBackend('output')))
+    #reactor.listenUDP(69, TFTP(FilesystemSynchronousBackend('output')))
+    reactor.listenUDP(69, TFTP(FilesystemSynchronousBackend('./')))
     reactor.run()
 
 if __name__ == '__main__':
